@@ -1,0 +1,147 @@
+
+//when Mother m1=new Child ( ); and non of the funtion is static then the show funtion of child class is called
+
+class Mother
+{
+    
+      public void show()
+    {
+        System.out.println("Hello World");
+    }
+}
+class Child extends Mother
+{
+     public void show()
+    {
+        System.out.println("Hello JUET");
+    }
+}
+ class Application
+{
+    public void call()
+    {
+	 
+		
+	    Mother m1=new Child();
+	    m1.show();
+}
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Application a=new Application();
+        a.call();
+    }
+}
+
+
+//when mother class show() funtion is static then error came
+
+class Mother
+{
+    
+     static public void show()
+    {
+        System.out.println("Hello World");
+    }
+}
+class Child extends Mother
+{
+     public void show()
+    {
+        System.out.println("Hello JUET");
+    }
+}
+ class Application
+{
+    public void call()
+    {
+	 
+		
+	    Mother m1=new Child();
+	    m1.show();
+}
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Application a=new Application();
+        a.call();
+    }
+}
+
+//error: show() in Child cannot override show() in Mother
+
+//when child class show() funtion is static then error came
+
+class Mother
+{
+    
+      public void show()
+    {
+        System.out.println("Hello World");
+    }
+}
+class Child extends Mother
+{
+    static public void show()
+    {
+        System.out.println("Hello JUET");
+    }
+}
+ class Application
+{
+    public void call()
+    {
+	 
+		
+	    Mother m1=new Child();
+	    m1.show();
+}
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Application a=new Application();
+        a.call();
+    }
+}
+
+
+//error: show() in Child cannot override show() in Mother
+
+
+//error: when both of them are static then show() funtion of mother class is call
+
+class Mother
+{
+    
+     static public void show()
+    {
+        System.out.println("Hello World");
+    }
+}
+class Child extends Mother
+{
+    static public void show()
+    {
+        System.out.println("Hello JUET");
+    }
+}
+ class Application
+{
+    public void call()
+    {
+	 
+		
+	    Mother m1=new Child();
+	    m1.show();
+}
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Application a=new Application();
+        a.call();
+    }
+}

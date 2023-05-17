@@ -1,0 +1,136 @@
+abstract class Bharatvanshi
+{
+     void fighter(String y)
+     {
+         System.out.println(" fighter");
+     }
+    
+}
+class Pandavs extends Bharatvanshi
+{
+    public int obedience;
+    public int kindness;
+    
+    Pandavs()
+    {
+        obedience=0;
+        kindness=0;
+        
+    }
+    public void SetKindness(int x) 
+    {
+        kindness=x; 
+        
+    }
+
+    public void SetObedience(int x) 
+    {
+         obedience=x;
+    }
+ 
+     public void outputkindness(String z) 
+    {
+         System.out.print("  kindness of ");
+         System.out.print(z);
+         System.out.print(" is "+ kindness);
+         System.out.println();
+        
+    }
+     public void outputobey(String z) 
+    {
+         System.out.print("  obedience of ");
+         System.out.print(z);
+         System.out.print(" is "+ obedience);
+        
+    }
+}
+
+class Kauravs extends Bharatvanshi
+{
+    public int obedience;
+    public int kindness;
+    
+    Kauravs()
+    {
+        obedience=0;
+        kindness=0;
+        
+    }
+    public void SetKindness(int x) 
+    {
+        kindness=x; 
+        
+    }
+
+    public void SetObedience(int x) 
+    {
+         obedience=x;
+    }
+  
+     public void outputkindness(String z) 
+    {
+         System.out.print("  kindness of ");
+         System.out.print(z);
+         System.out.print(" is "+ kindness);
+         System.out.println();
+        
+    }
+     public void outputobey(String z) 
+    {
+         System.out.print("  obedience of ");
+         System.out.print(z);
+         System.out.print(" is "+ obedience);
+        
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+		Pandavs arjun=new Pandavs();
+		int kindarjun=100;
+		int obeyarjun=100;
+		int obeybheem=100;
+		int kindbheem= kindarjun-20;
+		arjun.SetKindness(kindarjun);
+		arjun.SetObedience(obeyarjun);
+		System.out.println("About Arjun :-");
+		arjun.fighter("  Arjun");
+		arjun.outputkindness("Arjun");
+		arjun.outputobey("Arjun");
+		
+		Pandavs bheem=new Pandavs();
+		bheem.SetKindness(kindbheem);
+		bheem.SetObedience(obeybheem);
+		System.out.println();
+		System.out.println("About Bheem :-");
+		bheem.fighter("  Bheem");
+		bheem.outputkindness("Bheem");
+		bheem.outputobey("Bheem");
+		
+		Kauravs Kauravs[]= new Kauravs[100];
+		Kauravs vikran=new Kauravs();
+		Kauravs[0]=vikran;
+		int kindvikran=100;
+		int obeyvikran=100;
+		vikran.SetKindness(kindvikran);
+		vikran.SetObedience(obeyvikran);
+		System.out.println();
+		System.out.println("About Vikran :-");
+		Kauravs[0].fighter("  Vikran");
+		Kauravs[0].outputkindness("Vikran");
+		Kauravs[0].outputobey("Vikran");
+		
+		
+		for(int i=1;i<100;i++)
+		{
+		    Kauravs[i]=new Kauravs();
+		}
+		System.out.println();
+		System.out.println("About All kauravs :-");
+		Kauravs[1].fighter("kauravs");
+		Kauravs[1].outputkindness("kauravs");
+		Kauravs[1].outputobey("kauravs");
+		
+		
+	}
+}
